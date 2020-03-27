@@ -3,9 +3,7 @@
   "version": "2.3.1",
   "description": "Yelp Camp basics",
   "main": "app.js",
-  "scripts": {
-    "test": "mocha"
-  },
+  
   "author": "deepak maurya",
   "license": "ISC",
   "dependencies": {
