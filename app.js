@@ -16,10 +16,20 @@ var commentRoutes         =require('./routes/comments'),
     campgroundRoutes      =require('./routes/campgrounds'),
     indexRoutes           =require('./routes/index');
 
-mongoose.connect("mongodb://localhost/YelpCamp", {
+// mongoose.connect("mongodb://localhost/YelpCamp", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+//   useFindAndModify: false
+// });
+mongoose.connect("mongodb+srv://dpak:@dpaknitw@cluster0-nql1y.mongodb.net/test?retryWrites=true&w=majority",{
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useFindAndModify: false
+  useFindAndModify: false,
+  useCreateIndex:true
+}).then(()=>{
+  console.log('Connected to DB!');
+}).catch(err=>{
+  console.log('ERROR:',err.message);
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
