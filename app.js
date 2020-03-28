@@ -11,7 +11,7 @@ var express               = require("express"),
     Comment               = require("./models/comment"),
     seedDB                = require("./seeds");
 
-    //Requiring Routes
+//Requiring Routes
 var commentRoutes         =require('./routes/comments'),
     campgroundRoutes      =require('./routes/campgrounds'),
     indexRoutes           =require('./routes/index');
