@@ -17,3 +17,25 @@
 	background:#999;
 	color:black;
 }
+.giveMeEllipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2; /* number of lines to show */
+ }
+ #fix-height{
+	 height: 175px;
+ }
+ .scroll {overflow-x: hidden; overflow-y: auto;}
+
+ .horizontal{
+	 width: 100%;
+ }
+ .info-image{
+	 margin-left: 20px;
+ }
+ html{
+	 overflow-x: hidden;
+	 overflow-y: auto;
+ }
