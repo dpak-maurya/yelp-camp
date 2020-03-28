@@ -24,7 +24,6 @@ router.post("/",middleware.isLoggedin, function(req, res) {
     username:req.user.username
   }
   var newCampground = { name: name, image: image, price:price,description: desc,author:author };
-  console.log(req.user);
   Campground.create(newCampground, function(err, camp) {
     if (err) console.log(err);
     else {
