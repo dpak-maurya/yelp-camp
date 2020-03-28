@@ -21,7 +21,7 @@ var commentRoutes         =require('./routes/comments'),
 //   useUnifiedTopology: true,
 //   useFindAndModify: false
 // });
-mongoose.connect("mongodb+srv://dpak:@dpaknitw@cluster0-nql1y.mongodb.net/test?retryWrites=true&w=majority",{
+mongoose.connect(process.env.DATABASEURL,{
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
