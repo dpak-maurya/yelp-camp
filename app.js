@@ -21,11 +21,11 @@ var commentRoutes         =require('./routes/comments'),
 //   useUnifiedTopology: true,
 //   useFindAndModify: false
 // });
-console.log(process.env.PORT);
-mongoose.connect(process.env.DATABASEURL,{
+// mongodb+srv://dpak:<password>@cluster0-nql1y.mongodb.net/test?retryWrites=true&w=majority
+// console.log(process.env.DATABASEURL);
+mongoose.connect(process.env.DATABASEURL.toString(),{
   useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
+  useUnifiedTopology:true,
   useCreateIndex:true
 }).then(()=>{
   console.log('Connected to DB!');
