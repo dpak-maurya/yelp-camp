@@ -16,13 +16,9 @@ var commentRoutes         =require('./routes/comments'),
     campgroundRoutes      =require('./routes/campgrounds'),
     indexRoutes           =require('./routes/index');
 
-// mongoose.connect("mongodb://localhost/YelpCamp", {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-//   useFindAndModify: false
-// });
 // mongodb+srv://dpak:<password>@cluster0-nql1y.mongodb.net/test?retryWrites=true
-mongoose.connect(process.env.DATABASEURL.toString(),{
+var url=process.env.DATABASEURL || "mongodb://localhost/YelpCamp";
+mongoose.connect(url.toString(),{
   useNewUrlParser: true,
   useUnifiedTopology:true,
   useCreateIndex:true
