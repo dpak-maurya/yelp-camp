@@ -1,7 +1,7 @@
 <%-include("../partials/header")%>
 
 <div class="container">
-	<div class="container">
+	<!-- <div class="container"> -->
 	<header class="jumbotron">
 	<h1>Welcome to YelpCamp!</h1>
 	<p>View our hand-picked campgrounds from all over the world</p>
@@ -9,7 +9,8 @@
 		<a class="btn btn-primary btn-lg" href="/campgrounds/new">Add New Campground</a>
 	</p>
 	</header>
-	</div>
+	
+	<!-- </div> -->
 	<div class="row text-center" style="display: flex;flex-wrap: wrap;">
 		<%campgrounds.forEach(function(campground){%>
 		<div class="col-md-3 col-sm-6">
