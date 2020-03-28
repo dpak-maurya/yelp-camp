@@ -44,11 +44,4 @@ router.get("/logout", function(req, res) {
   res.redirect("/campgrounds");
 });
 
-//Middleware
-function isLoggedin(req, res, next) {
-  if (req.isAuthenticated()) {
-    return next();
-  }
-  return res.redirect("/login");
-}
 module.exports=router;
