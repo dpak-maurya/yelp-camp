@@ -21,6 +21,7 @@ var commentRoutes         =require('./routes/comments'),
 //   useUnifiedTopology: true,
 //   useFindAndModify: false
 // });
+console.log(process.env.PORT);
 mongoose.connect(process.env.DATABASEURL,{
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -63,6 +64,6 @@ app.use("/",indexRoutes);
 app.use("/campgrounds",campgroundRoutes);
 app.use( "/campgrounds/:id/comments",commentRoutes);
 
-app.listen(8000, function() {
+app.listen(process.env.PORT, function() {
   console.log("server started");
 });
