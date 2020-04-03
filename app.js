@@ -10,6 +10,7 @@ var express               = require("express"),
     Campground            = require("./models/campground"),
     Comment               = require("./models/comment"),
     seedDB                = require("./seeds");
+    
 
 //Requiring Routes
 var commentRoutes         =require('./routes/comments'),
@@ -37,7 +38,7 @@ app.use(flash());
 
 app.use(
   require("express-session")({
-    secret: "Corona virus has spread all over the world",
+    secret: "Corona virus has spread all 1over the world",
     resave: false,
     saveUninitialized: false
   })

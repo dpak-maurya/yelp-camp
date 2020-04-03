@@ -8,7 +8,7 @@ router.get("/", function(req, res) {
   Campground.find({}, function(err, campgrounds) {
     if (err) console.log();
     else {
-      res.render("campgrounds/index", { campgrounds: campgrounds });
+      res.render("campgrounds/index", { campgrounds: campgrounds ,page:'campgrounds'});
     }
   });
 });
