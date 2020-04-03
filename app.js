@@ -2,6 +2,7 @@ var express               = require("express"),
     app                   = express(),
     bodyParser            = require("body-parser"),
     mongoose              = require("mongoose"),
+    moment                = require('moment'),
     passport              = require("passport"),
     LocalStrategy         = require("passport-local"),
     User                  = require("./models/user"),
@@ -50,6 +51,7 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 app.use(function(req, res, next) {
+  app.locals.moment = moment;
   res.locals.currentUser = req.user;
   res.locals.error=req.flash('error')
   res.locals.success=req.flash('success');
