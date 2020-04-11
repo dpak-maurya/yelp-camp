@@ -28,14 +28,23 @@
 	 height: 175px;
  }
  .scroll {overflow-x: hidden; overflow-y: auto;}
-
- .horizontal{
-	 width: 100%;
- }
- .info-image{
-	 margin-left: 20px;
- }
  html{
 	 overflow-x: hidden;
 	 overflow-y: auto;
  }
+
+ @media screen and (min-width: 400px) {
+	.card{
+		width:80%;
+		margin:0 auto;
+	}
+  }
+  
+  @media screen and (min-width: 800px) {
+	.card{
+		width:50%;
+		margin:0 auto;
+	}
+
+  }
+ 

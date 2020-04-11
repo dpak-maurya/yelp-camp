@@ -1,12 +1,12 @@
 <%-include("../partials/header")%>
 
 <div class="container">
-	<div class="row">
-		<h1 style="text-align: center;">Add Comments: <%=campground.name.slice(0,12)%>...</h1>
-		<div style="width: 30%;margin: 25px auto;">
+	<div class="row card">
+		<h1 style="text-align: center;">Add Comments to <%=campground.name.slice(0,12)%>...</h1>
+		<div>
 			<form action="/campgrounds/<%=campground._id%>/comments" method="POST">
 				<div class="form-group">
-					<textarea name="comment[text]" class="form-control" rows="5" placeholder="write comment here"></textarea>
+					<textarea class="form-control" name="comment[text]" type="text"  rows="5" placeholder="comment will goes here"></textarea>
 				</div>
 				
 				<div class="form-group">
